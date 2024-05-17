@@ -1,26 +1,6 @@
 {
 	"name": "@vscode/gulp-electron",
-	"version": "0.0.1",
-	"private": false,
 	"description": "gulp plugin for packaging Electron into VS Code",
-	"keywords": [
-		"land"
-	],
-	"homepage": "HTTPS://GitHub.Com/CodeEditorLand/LandGulpElectron#readme",
-	"bugs": {
-		"url": "HTTPS://GitHub.Com/CodeEditorLand/LandGulpElectron/issues"
-	},
-	"repository": {
-		"type": "git",
-		"url": "git+HTTPS://github.com/CodeEditorLand/LandGulpElectron.git"
-	},
-	"license": "SEE LICENSE IN LICENSE",
-	"author": {
-		"name": "🛬 Land —",
-		"email": "Land@PlayForm.Cloud",
-		"url": "HTTPS://Land.PlayForm.Cloud"
-	},
-	"type": "module",
 	"main": "src/index.js",
 	"scripts": {
 		"Document": "Document 'Source/**/*.ts'",
@@ -41,10 +21,6 @@
 		"vinyl-fs": "4.0.0"
 	},
 	"devDependencies": {
-		"@playform/build": "0.0.7",
-		"@playform/document": "0.0.6"
-	},
-	"publishConfig": {
-		"access": "public"
+		"@playform/build": "0.0.7"
 	}
 }
