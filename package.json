@@ -1,17 +1,17 @@
 {
 	"dependencies": {
-		"@octokit/rest": "^20.1.1",
+		"@octokit/rest": "20.1.1",
 		"event-stream": "4.0.1",
-		"mkdirp": "^3.0.1",
-		"plist": "^3.1.0",
-		"progress": "^2.0.3",
-		"rcedit": "^4.0.1",
-		"rimraf": "^5.0.7",
-		"semver": "^7.6.2",
-		"sumchecker": "^3.0.1",
-		"temp": "^0.9.4",
-		"vinyl": "^3.0.0",
-		"vinyl-fs": "^4.0.0"
+		"mkdirp": "3.0.1",
+		"plist": "3.1.0",
+		"progress": "2.0.3",
+		"rcedit": "4.0.1",
+		"rimraf": "5.0.7",
+		"semver": "7.6.2",
+		"sumchecker": "3.0.1",
+		"temp": "0.9.4",
+		"vinyl": "3.0.0",
+		"vinyl-fs": "4.0.0"
 	},
 	"description": "gulp plugin for packaging Electron into VS Code",
 	"devDependencies": {},
