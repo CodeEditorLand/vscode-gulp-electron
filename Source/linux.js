@@ -6,33 +6,33 @@ var rename = require("gulp-rename");
 var semver = require("semver");
 
 function getOriginalAppName(opts) {
-  return semver.gte(opts.version, "0.24.0") ? "electron" : "atom";
+	return semver.gte(opts.version, "0.24.0") ? "electron" : "atom";
 }
 
 exports.getAppPath = function (opts) {
-  return "resources/app";
+	return "resources/app";
 };
 
 function removeDefaultApp() {
-  var defaultAppPath = path.join("resources", "default_app");
+	var defaultAppPath = path.join("resources", "default_app");
 
-  return es.mapSync(function (f) {
-    if (!f.relative.startsWith(defaultAppPath)) {
-      return f;
-    }
-  });
+	return es.mapSync(function (f) {
+		if (!f.relative.startsWith(defaultAppPath)) {
+			return f;
+		}
+	});
 }
 
 function renameApp(opts) {
-  return rename(function (path) {
-    if (
-      path.dirname === "." &&
-      path.basename === getOriginalAppName(opts) &&
-      path.extname === ""
-    ) {
-      path.basename = opts.linuxExecutableName || opts.productName;
-    }
-  });
+	return rename(function (path) {
+		if (
+			path.dirname === "." &&
+			path.basename === getOriginalAppName(opts) &&
+			path.extname === ""
+		) {
+			path.basename = opts.linuxExecutableName || opts.productName;
+		}
+	});
 }
 
 /**
@@ -44,21 +44,21 @@ function renameApp(opts) {
  * See: https://github.com/electron/electron/pull/17269#issuecomment-470671914
  */
 function updateSandboxHelperPermissions() {
-  return es.mapSync(function (f) {
-    if (!f.isNull() && !f.isDirectory() && f.path === "chrome-sandbox") {
-      f.stat.mode = 0o4755;
-    }
-    return f;
-  });
+	return es.mapSync(function (f) {
+		if (!f.isNull() && !f.isDirectory() && f.path === "chrome-sandbox") {
+			f.stat.mode = 0o4755;
+		}
+		return f;
+	});
 }
 
 exports.patch = function (opts) {
-  var pass = es.through();
+	var pass = es.through();
 
-  var src = pass
-    .pipe(updateSandboxHelperPermissions())
-    .pipe(opts.keepDefaultApp ? es.through() : removeDefaultApp())
-    .pipe(renameApp(opts));
+	var src = pass
+		.pipe(updateSandboxHelperPermissions())
+		.pipe(opts.keepDefaultApp ? es.through() : removeDefaultApp())
+		.pipe(renameApp(opts));
 
-  return es.duplex(pass, src);
+	return es.duplex(pass, src);
 };
