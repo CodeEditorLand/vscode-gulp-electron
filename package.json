@@ -1,8 +1,4 @@
 {
-	"name": "@vscode/gulp-electron",
-	"description": "gulp plugin for packaging Electron into VS Code",
-	"main": "src/index.js",
-	"scripts": {},
 	"dependencies": {
 		"@octokit/rest": "18.0.14",
 		"event-stream": "3.3.4",
@@ -17,5 +13,9 @@
 		"vinyl": "3.0.0",
 		"vinyl-fs": "3.0.3"
 	},
-	"devDependencies": {}
+	"description": "gulp plugin for packaging Electron into VS Code",
+	"devDependencies": {},
+	"main": "src/index.js",
+	"name": "@vscode/gulp-electron",
+	"scripts": {}
 }
