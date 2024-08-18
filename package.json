@@ -1,6 +1,6 @@
 {
 	"dependencies": {
-		"@octokit/rest": "21.0.1",
+		"@octokit/rest": "21.0.2",
 		"event-stream": "4.0.1",
 		"mkdirp": "3.0.1",
 		"plist": "3.1.0",
