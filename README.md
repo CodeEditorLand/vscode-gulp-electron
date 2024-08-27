@@ -7,13 +7,13 @@ https://electronjs.org/docs/tutorial/first-app
 
 # @vscode/gulp-electron
 
-### Installation
+### 🚀 Installation
 
 ```bash
 npm install --save-dev @vscode/gulp-electron
 ```
 
-### Usage
+### 🛠️ Usage
 
 You can use this module in two distinct ways: **to package your application**
 and/or **to download a version of Electron** to disk.
