@@ -4,7 +4,7 @@
 	"main": "src/index.js",
 	"scripts": {},
 	"dependencies": {
-		"@octokit/rest": "21.0.2",
+		"@octokit/rest": "21.1.0",
 		"event-stream": "4.0.1",
 		"mkdirp": "3.0.1",
 		"plist": "3.1.0",
